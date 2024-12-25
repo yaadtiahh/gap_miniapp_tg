@@ -1,0 +1,61 @@
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* Чтобы содержимое располагалось сверху вниз */
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0; /* Закрепляем хедер внизу */
+  left: 0;
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+  z-index: 1;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;  /* Элементы списка будут располагаться по горизонтали */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  display: flex;  /* Устанавливаем flex для каждого элемента li */
+  flex-direction: column;  /* Картинка будет сверху, текст снизу */
+  align-items: center;  /* Выравнивание по центру */
+  width: 55px;
+  margin-right: 16px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;  /* Картинка сверху, текст снизу */
+  align-items: center;  /* Центрируем элементы в ссылке */
+}
+
+nav a img {
+  width: 20px;  /* Можно настроить размер изображения */
+  height: 20px;
+  margin-bottom: 7px;  /* Отступ между картинкой и текстом */
+}

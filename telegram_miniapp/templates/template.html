@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/template.css' %}">
+  {% block css %}{% endblock %}
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <ul>
+        <li><a href="/quiz"><img src="{% static 'imgs/icons_nav/quiz.svg' %}">QUIZ</a></li>
+        <li><a href="/learn"><img src="{% static 'imgs/icons_nav/book.svg' %}">LEARN</a></li>
+        <li><a href="/"><img src="{% static 'imgs/icons_nav/home.svg' %}">HOME</a></li>
+        <li><a href="/invite"><img src="{% static 'imgs/icons_nav/invite.svg' %}">INVITE</a></li>
+        <li><a href="/profile"><img src="{% static 'imgs/icons_nav/profile.svg' %}">PROFILE</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}
+    <!-- Сюда будет подставляться контент из других страниц -->
+    {% endblock %}
+  </main>
+    
+  <script>
+      const tg = window.Telegram.WebApp;
+      tg.ready();
+      window.addEventListener('load', function() {
+        var video = document.getElementById('videoBackground');
+        video.play(); // Программно запускаем воспроизведение
+      });
+  </script>
+</body>
+</html>

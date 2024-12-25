@@ -1,0 +1,136 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.invites-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрируем содержимое */
+}
+
+.invite-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.invite-main-text {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.invite-main-text p {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  margin: 0;
+}
+
+.invite-second-text {
+  margin-top: 40px;
+  margin-left: 10px;
+  display: flex; /* Принудительно сделаем это flex-контейнером */
+  flex-direction: column;
+  align-items: flex-start; /* Выравнивание по левому краю */
+}
+
+.invite-second-text h2 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.how-work-invite {
+  display: flex;
+  flex-direction: row;
+  gap: 11px; /* Убираем отступы между элементами */
+  align-items: center; /* Выровнять элементы по центру по вертикали */
+  padding-left: 7px;
+}
+
+.how-work-invite .instruction {
+  display: flex;
+  flex-direction: column;
+  gap: 26px; /* Убираем отступы между строками текста */
+  padding-left: 11px; /* Если нужно немного отступить от линии, можно оставить */
+  margin: 0; /* Убираем маргин */
+}
+
+.text-block {
+  display: flex;
+  flex-direction: row;
+  gap: 3px; /* Расстояние между текстом и изображением */
+  flex-wrap: nowrap;
+  margin: 0;
+}
+
+.text-block p {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0; /* Убираем паддинги */
+  color: white;
+  white-space: nowrap; /* Убедимся, что текст не будет переноситься */
+}
+
+.text-block img {
+  max-width: 20px; /* Устанавливаем максимальную ширину для изображений */
+  height: auto; /* Сохраняем пропорции */
+}
+
+#custom-line {
+  position: relative; /* Для расположения псевдоэлементов относительно линии */
+  width: 2px;
+  height: 152px;
+  background-color: white;
+  margin-left: 15px;
+}
+
+#custom-line::before,
+#custom-line::after,
+#custom-line .center-dot {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 0; /* Убираем лишние отступы */
+}
+
+#custom-line::before { /* Точка сверху */
+  top: -4px;
+  left: -3px;
+}
+
+#custom-line::after { /* Точка снизу */
+  bottom: -4px;
+  left: -3px;
+}
+
+#custom-line .center-dot { /* Точка в центре */
+  top: 50%;
+  left: -3px;
+  transform: translateY(-50%);
+}
+
+.invite-btn {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.invite-btn button {
+  font-size: 14px;
+  color: white;
+  background-color: none;
+  width: 310px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgb(14, 13, 17, 0.7);
+  border: 1px solid #79747E;
+}

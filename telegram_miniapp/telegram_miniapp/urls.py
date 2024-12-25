@@ -19,5 +19,6 @@ from miniapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.miniapp, name='miniapp'),
+    path('', views.home, name='home'),
+    path('invite/', views.invite, name='invite'),
 ]

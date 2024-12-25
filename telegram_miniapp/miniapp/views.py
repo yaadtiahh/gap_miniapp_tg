@@ -1,5 +1,9 @@
 from django.shortcuts import render
 
 
-def miniapp(request):
-    return render(request, 'miniapp.html')
+def home(request):
+    return render(request, 'home.html')
+
+
+def invite(request):
+    return render(request, 'invite.html')
