@@ -8,7 +8,7 @@ load_dotenv()
 
 
 async def start(update: Update, context):
-    # Ваш актуальный ngrok URL
+    # Ваш актуальный URL (например, Railway или ngrok)
     web_app_url = "https://d4e9-37-47-130-232.ngrok-free.app/"
 
     # Настраиваем кнопку с Mini App
@@ -26,5 +26,12 @@ bot_token = os.getenv("TG_BOT_TOKEN")
 application = Application.builder().token(bot_token).build()
 application.add_handler(CommandHandler("start", start))
 
-# Запуск бота
-application.run_polling()
+# Настройка Webhook
+webhook_url = f"https://railway.com/project/659f5bb0-9030-45e6-84cf-5f02f8b8028c?environmentId=fe904318-53be-4966-b6fa-96697e630f12/{bot_token}"
+
+application.run_webhook(
+    listen="0.0.0.0",
+    port=int(os.getenv("PORT", "8443")),
+    url_path=f"{bot_token}",
+    webhook_url=webhook_url,
+)
