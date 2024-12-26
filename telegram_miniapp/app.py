@@ -2,6 +2,8 @@ import os
 from dotenv import load_dotenv
 from telegram import Update, WebAppInfo, KeyboardButton, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler
+import logging
+
 
 # Загружаем переменные окружения
 load_dotenv()
@@ -29,9 +31,15 @@ application.add_handler(CommandHandler("start", start))
 # Настройка Webhook
 webhook_url = f"gap_miniapp.up.railway.app/{bot_token}"
 
+logging.basicConfig(level=logging.DEBUG)
+
+# Проверка переменных
+print(f"Webhook URL: {webhook_url}")
+print(f"Port: {os.environ.get('PORT', 8443)}")
+
+
 application.run_webhook(
     listen="0.0.0.0",
-    port=int(os.getenv("PORT", "8443")),
-    url_path=f"{bot_token}",
-    webhook_url=webhook_url,
+    port=int(os.environ.get("PORT", 8443)),
+    webhook_url=webhook_url
 )
