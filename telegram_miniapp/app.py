@@ -27,7 +27,7 @@ application = Application.builder().token(bot_token).build()
 application.add_handler(CommandHandler("start", start))
 
 # Настройка Webhook
-webhook_url = f"https://railway.com/project/659f5bb0-9030-45e6-84cf-5f02f8b8028c?environmentId=fe904318-53be-4966-b6fa-96697e630f12/{bot_token}"
+webhook_url = f"https://efficient-mindfulness.up.railway.app/{bot_token}"
 
 application.run_webhook(
     listen="0.0.0.0",
