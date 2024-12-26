@@ -27,7 +27,7 @@ application = Application.builder().token(bot_token).build()
 application.add_handler(CommandHandler("start", start))
 
 # Настройка Webhook
-webhook_url = f"https://gapminiapptg-production.up.railway.app/{bot_token}"
+webhook_url = f"daring-alignment-production.up.railway.app/{bot_token}"
 
 application.run_webhook(
     listen="0.0.0.0",
