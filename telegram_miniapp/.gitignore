@@ -1,3 +1,4 @@
 .env
 firebase/gap-app.json
-pycache/
+**/__pycache__/
+**/*.pyc
