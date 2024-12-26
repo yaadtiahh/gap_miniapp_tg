@@ -1,0 +1,24 @@
+{% extends 'template.html' %}
+
+{% load static %}
+
+{% block title %}
+  Profile
+{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+
+{% block content %}
+  <div class="profile-container">
+    <div class="username-tg">
+      <h1><span id="username">Гость</span>!</h1>
+    </div>
+    <div class="balance"></div>
+    <div class="connect-wallet"></div>
+    <div class="listing"></div>
+  </div>
+  <script src="{% static 'scripts/profile.js' %}" defer></script>
+{% endblock %}

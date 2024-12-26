@@ -1,27 +1,30 @@
 import os
 from dotenv import load_dotenv
-from telegram import Update
+from telegram import Update, WebAppInfo, KeyboardButton, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler
 
+# Загружаем переменные окружения
 load_dotenv()
 
 
 async def start(update: Update, context):
-    # Создаем кнопку для открытия мини-приложения с URL
-    web_app_url = "https://b303-37-47-129-149.ngrok-free.app/"  # Замени на URL своего приложения
-    button = [[{"text": "Открыть Mini App", "web_app": {"url": web_app_url}}]]
-    reply_markup = {"keyboard": button, "resize_keyboard": True}
+    # Ваш актуальный ngrok URL
+    web_app_url = "https://d4e9-37-47-130-232.ngrok-free.app/"
 
-    # Ответ на команду /start с кнопкой
-    await update.message.reply_text("Привет! Иди нахуй:", reply_markup=reply_markup)
+    # Настраиваем кнопку с Mini App
+    button = KeyboardButton(
+        text="Открыть Mini App",
+        web_app=WebAppInfo(url=web_app_url)
+    )
+    reply_markup = ReplyKeyboardMarkup([[button]], resize_keyboard=True)
 
+    # Отправляем сообщение с кнопкой
+    await update.message.reply_text("Привет! Вот твой Mini App:", reply_markup=reply_markup)
 
+# Инициализация приложения
 bot_token = os.getenv("TG_BOT_TOKEN")
-# Создаем объект Application
 application = Application.builder().token(bot_token).build()
-
-# Добавляем обработчик команды /start
 application.add_handler(CommandHandler("start", start))
 
-# Запускаем бота
+# Запуск бота
 application.run_polling()
