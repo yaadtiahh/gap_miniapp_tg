@@ -2,3 +2,4 @@
 firebase/gap-app.json
 **/__pycache__/
 **/*.pyc
+venv/
