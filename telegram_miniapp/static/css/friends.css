@@ -165,9 +165,81 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(180deg, rgba(28, 27, 27, 0.75) 10%, rgba(139, 69, 19, 0.75) 100%);
+  background: linear-gradient(180deg, rgba(29, 27, 27, 0.01), rgba(211, 85, 17, 0.75) 100%);
   width: 107px;
   height: 107px;
   border-radius: 32px;
+  margin: 0;
+  gap: 6px;
 }
 
+.share h2, .join h2, .earn h2{
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+/* _________________________________________________________________________________________________-- */
+
+.friends-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 340px;
+  height: 200px;
+  background-color: #d9d9d90e;
+  border-radius: 20px;
+}
+
+.friends-block h1 {
+  color: white;
+  font-size: 24px;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.friends {
+  width: 308px;
+  height: 102px;
+}
+
+.friend-1, .friend-2, .friend-3, .friend-4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.friend-username {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.friend-username p{
+  color: white;
+  font-size: 16px;
+}
+
+.friends-gaps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9C400F;
+  border-radius: 10px;
+  width: 60px;
+  height: 24px;
+}
+
+.friends-gaps p {
+  color: white;
+  font-size: 12px;
+}
+
+.friends-block img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}

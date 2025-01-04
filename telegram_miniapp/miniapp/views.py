@@ -1,6 +1,5 @@
 from django.http import JsonResponse
 from django.shortcuts import render
-from datetime import datetime
 from .models import Quest
 
 
@@ -13,21 +12,8 @@ def complete_quest(request, quest_id):
     return JsonResponse({'success': False}, status=400)
 
 
-def get_greeting():
-    current_hour = datetime.now().hour
-    if current_hour < 12:
-        greeting = "Good morning"
-    elif current_hour < 17:
-        greeting = "Good afternoon"
-    else:
-        greeting = "Good evening"
-
-    return greeting
-
-
 def home(request):
-    greeting = get_greeting()
-    return render(request, 'home.html', {"greeting": greeting})
+    return render(request, 'home.html')
 
 
 def friends(request):
@@ -35,8 +21,7 @@ def friends(request):
 
 
 def profile(request):
-    greeting = get_greeting()
-    return render(request, 'profile.html', {"greeting": greeting})
+    return render(request, 'profile.html')
 
 
 def learn(request):
