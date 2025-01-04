@@ -1,0 +1,79 @@
+{% extends 'template.html' %}
+
+{% load static %}
+
+{% block title %}
+  Quiz
+{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/quiz.css' %}">
+{% endblock %}
+
+
+{% block content %}
+  <div class="quiz-container">
+
+    <div class="quizzes-streak">
+
+      <div class="quiz-completed">
+        <img src="{% static 'imgs/tasks_completed.svg' %}">
+        <div class="quiz-completed-content">
+          <h1>16</h1>
+          <p>Quizzes Completed</p>
+        </div>
+      </div>
+
+      <div class="vertical-line"></div>
+
+      <div class="daily-streak">
+        <img src="{% static 'imgs/calendar.svg' %}">
+        <div class="quiz-completed-content">
+          <h1>5</h1>
+          <p>Daily Streak</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="practice-more">
+      <div class="practice-more-title">
+        <img src="{% static 'imgs/more_time.svg' %}">
+        <h2>Practice More</h2>
+      </div>
+      <div class="daily-quiz-block">
+        <div class="daily-quiz">
+          <img src="{% static 'imgs/lamp_icon.svg' %}">
+          <div class="daily-quiz-content">
+            <h1>Daily Quiz</h1>
+            <p>20 mixed questions</p>
+          </div>
+        </div>
+        <img src="{% static 'imgs/arrow_right.svg' %}" style="width: 24px;height: 24px; padding-right: 25px;">
+      </div>
+    </div>
+
+
+    <div class="continue-studying">
+      <div class="continue-studying-title">
+        <img src="{% static 'imgs/continue.svg' %}">
+        <h2>Continue Studying</h2>
+      </div>
+      <div class="topic-block">
+        <div class="topic-content">
+          <img src="{% static 'imgs/topic_icon.svg' %}">
+          <div class="topic-title">
+            <h1>Intoduction</h1>
+            <p>12 questions left</p>
+          </div>
+        </div>
+        <div class="btn-learn">
+          <p>LEARN</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="{% static 'scripts/quiz.js' %}"></script>
+{% endblock %}
