@@ -10,26 +10,36 @@
   <link rel="stylesheet" href="{% static 'css/template.css' %}">
   {% block css %}{% endblock %}
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="{% static 'scripts/template.js' %}" defer></script>
 </head>
 
 <body>
   <header class="header">
-    <nav class="nav">
-      <ul>
-        <li><a href="/quiz"><img src="{% static 'imgs/icons_nav/quiz.svg' %}">QUIZ</a></li>
-        <li><a href="/learn"><img src="{% static 'imgs/icons_nav/book.svg' %}">LEARN</a></li>
-        <li><a href="/"><img src="{% static 'imgs/icons_nav/home.svg' %}">HOME</a></li>
-        <li><a href="/invite"><img src="{% static 'imgs/icons_nav/invite.svg' %}">INVITE</a></li>
-        <li><a href="/profile"><img src="{% static 'imgs/icons_nav/profile.svg' %}">PROFILE</a></li>
-      </ul>
-    </nav>
+    <div class="greetings-profile">
+      <div class="greetings">
+        <p>{{ greeting }},<br><span style="color: #72A2C8; font-size: 20px;" id="username"></span>!</p>
+      </div>
+      <div class="profile-img">
+        <a href="/profile"><img src="{% static 'imgs/ava.jpg' %}"></a>
+      </div>
+    </div>
   </header>
-
   <main>
     {% block content %}
     <!-- Сюда будет подставляться контент из других страниц -->
     {% endblock %}
   </main>
+  <div class="nav-bar">
+    <nav class="nav">
+      <ul>
+        <li><a href="/quiz"><img src="{% static 'imgs/icons_nav/quiz.svg' %}">QUIZ</a></li>
+        <li><a href="/learn"><img src="{% static 'imgs/icons_nav/book.svg' %}">LEARN</a></li>
+        <li><a href="/"><img src="{% static 'imgs/icons_nav/home.svg' %}">HOME</a></li>
+        <li><a href="/friends"><img src="{% static 'imgs/icons_nav/invite.svg' %}">FRIENDS</a></li>
+        <li><a href="/profile"><img src="{% static 'imgs/icons_nav/profile.svg' %}">PROFILE</a></li>
+      </ul>
+    </nav>
+  </div>
     
   <script>
       const tg = window.Telegram.WebApp;

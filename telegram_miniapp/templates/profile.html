@@ -13,12 +13,58 @@
 
 {% block content %}
   <div class="profile-container">
-    <div class="username-tg">
-      <h1><span id="username">Гость</span>!</h1>
+<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="news-block">
+      <div class="news-title">
+        <p>News</p>
+        <img src="{% static 'imgs/arrow_right.svg' %}">
+      </div>
+      <div class="news-icon">
+        <img src="{% static 'imgs/news_icon.svg' %}">
+      </div>
     </div>
-    <div class="balance"></div>
-    <div class="connect-wallet"></div>
-    <div class="listing"></div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="profile-balance">
+      <div class="balance">
+        <img src="{% static 'imgs/token.png' %}">
+        <p>1200</p>
+      </div>
+      <div class="connect-wallet">
+        <button>CONNECT WALLET</button>
+        <img src="{% static 'imgs/wallet_icon.png' %}">
+      </div>
+    </div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="quests-block">
+      <h1>QUESTS</h1>
+      <div class="quests">
+        
+        <div class="quest-1">
+          <p>follow our socials</p>
+          <img src="{% static 'imgs/complited_quest_icon.svg' %}">
+        </div>
+        <div class="quest-2">
+          <p>check our latest post</p>
+          <img src="{% static 'imgs/complited_quest_icon.svg' %}">
+        </div>
+        <div class="quest-3">
+          <p>subscribe on GAP</p>
+          <img src="{% static 'imgs/quest_icon.svg' %}">
+        </div>
+        <div class="quest-4">
+          <p>do 10 quiz</p>
+          <img src="{% static 'imgs/quest_icon.svg' %}">
+        </div>
+
+      </div>
+    </div>
+  <!-- ---------------------------------------------------------------------------------------------------------------------------- -->
   </div>
+  
+  <div class="btn-claim-reward">
+    <button>RECEIVE A REWARD</button>
+  </div>
+
+
   <script src="{% static 'scripts/profile.js' %}" defer></script>
 {% endblock %}

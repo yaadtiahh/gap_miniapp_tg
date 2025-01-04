@@ -9,7 +9,7 @@ load_dotenv()
 
 async def start(update: Update, context):
     # Ваш актуальный ngrok URL
-    web_app_url = "https://d4e9-37-47-130-232.ngrok-free.app/"
+    web_app_url = "https://c778-37-47-128-24.ngrok-free.app/"
 
     # Настраиваем кнопку с Mini App
     button = KeyboardButton(

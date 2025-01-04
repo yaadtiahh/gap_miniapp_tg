@@ -18,10 +18,15 @@ from django.urls import path
 from miniapp import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('invite/', views.invite, name='invite'),
-    path('profile/', views.profile, name='profile'),
+    path('admin/', admin.site.urls),
+
     path('quiz/', views.quiz, name='quiz'),
     path('learn/', views.learn, name='learn'),
+    path('home/', views.home, name='home'),
+    path('friends/', views.friends, name='friends'),
+    path('profile/', views.profile, name='profile'),
+
+    path('home/complete/<int:quest_id>/', views.complete_quest, name='complete_quest'),
+
 ]

@@ -6,21 +6,59 @@ body {
   flex-direction: column; /* Чтобы содержимое располагалось сверху вниз */
   overflow: hidden;
   font-family: "Inria Sans", serif;
+  justify-content: center;
+  align-items: center;
 }
 
-.header {
+/* _____________________________________________________________________________________________________________________________ */
+/* greetings-profile START */
+.greetings-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 340px;
+  height: 48px;
+  margin-top: 20px;
+}
+
+.greetings {
+  width: 180px;
+  height: 48px;
+  line-height: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.greetings p {
+  margin: 0;
+  padding: 0;
+  font-size: 24px; 
+  color: white;
+}
+
+.profile-img img{
+  border: 1px solid #D35411;
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+}
+
+.nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  bottom: 0; /* Закрепляем хедер внизу */
+  position: fixed; /* Фиксируем внизу экрана */
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 44px;
+  height: 90px;
   box-sizing: border-box;
-  z-index: 1;
-  margin-bottom: 30px;
-  margin-left: 10px;
+  margin: 0; /* Убираем лишние отступы */
+  padding-left: 10px; /* Вместо margin-left, чтобы не ломать ширину */
+  padding-bottom: 50px;
+  padding-top: 50px;
+  z-index: 1000; /* Поверх остальных элементов */
+  background-color: hsla(0, 0%, 0%, 0.73); /* Задаём фон, если нужно перекрыть содержимое */
 }
 
 .nav {
