@@ -12,23 +12,51 @@
 
 
 {% block content %}
-  <div class="learn-container">
-
-
+<div class="learn-container">
+  <a href="#" class="learning-link">
     <div class="learning">
-
       <div class="learning-content">
         <div class="learning-title">
+      
           <h1>Learning</h1>
+      
           <img src="{% static 'imgs/arrow_right.svg' %}" style="width: 20px; height: 20px;">
+      
         </div>
         <p>Learn more about the world of cryptocurrencies and stock markets. These manuals are suitable for both beginners and experienced traders.</p>
       </div>
-
-      <img src="{% static 'imgs/arrow_right.svg' %}">
+      <img src="{% static 'imgs/Learn_icon.svg' %}">
     </div>
+  </a>
+
+  <div class="your-stats">
+    <div class="stats-title">
+      <h2>YOUR STATS</h2>
+      <img src="{% static 'imgs/stats_icon.svg' %}" style="width: 32px; height: 32px;">
+    </div>
+    <div class="stats-blocks">
+
+      <div class="left-blocks">
+        <div class="done-block">
+          <h1>0</h1>
+          <p>Done</p>
+        </div>
+        <div class="desired-block">
+          <h1>0</h1> 
+          <br>
+          <p>Desired</p>
+        </div>
+      </div>
+      
+      <div class="right-blocks">   
+          <div class="inprogress-block"></div>
+          <div class="waiting-block"></div>
+      </div>      
 
 
-  </div>
+    </div>
+  </div>  
+</div>
+
   <script src="{% static 'scripts/learn.js' %}"></script>
 {% endblock %}
