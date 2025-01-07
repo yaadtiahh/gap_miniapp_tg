@@ -125,7 +125,7 @@ body {
 	font-weight: bold;
 }
 
-.left-blocks {
+.left-blocks, .right-blocks {
 	display: flex;
 	flex-direction: column;
 	width: 150px;
@@ -134,10 +134,11 @@ body {
 	margin: 0;
 }
 
-.done-block {
+.done-block, .waiting-block {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	border-radius: 36px;
 	width: 150px;
 	height: 150px;
@@ -145,16 +146,15 @@ body {
 	background: radial-gradient(circle,rgba(28, 27, 27, 0.01) 0%,rgba(211, 84, 17, 0.75) 100%);
 }
 
-.done-block h1 {
+.done-block h1, .waiting-block h1 {
 	font-size: 64px;
-	padding-top: 20px;
 }
 
-.done-block p {
+.done-block p, .waiting-block p {
 	font-size: 20px;
 }
 
-.desired-block {
+.desired-block, .inprogress-block {
 	width: 150px;
 	height: 82px;	
 	background: radial-gradient(circle,rgba(28, 27, 27, 0.01) 0%,rgba(211, 84, 17, 0.75) 100%);
@@ -164,6 +164,7 @@ body {
 	border-radius: 20px;
 	margin: 0;
 	padding: 0;
+	justify-content: center;
 }
 
 .desired-block h1 {
